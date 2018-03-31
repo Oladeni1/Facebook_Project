@@ -41,18 +41,18 @@ public static void FacebookTest() {
 		//Setting Birthday details:
 		//Setting Birthday "day"
 		WebElement day =driver.findElement(By.name("birthday_day"));
-		Select dayselect = new Select(day);
-		dayselect.selectByValue("20");
+		Select selectday = new Select(day);
+		selectday.selectByValue("31");
 		
 		//Setting Birthday "month"
 		WebElement month =driver.findElement(By.id("month"));
-		Select monthselect = new Select(month);
-		monthselect.selectByValue("8");
+		Select selectmonth = new Select(month);
+		selectmonth.selectByValue("8");
 		
 		//Setting Birthday "year"
 		WebElement year =driver.findElement(By.name("birthday_year"));
-		Select yearselect = new Select(year);
-	    yearselect.selectByValue("1980");
+		Select selectyear = new Select(year);
+	    selectyear.selectByValue("1980");
 		
 		//Setting Gender
 		driver.findElement(By.name("sex")).click();
