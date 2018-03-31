@@ -3,6 +3,7 @@ package com.JavaProjectEx;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Google_Search_Functionality {
 
@@ -15,10 +16,17 @@ public class Google_Search_Functionality {
 	public static void Google_Search_Functionality() {
 		
 		//Setup of environment
+		//CHROME 
 		System.setProperty("webdriver.chrome.driver", "C:\\Selenium_Jars_Extensions\\chromedriver.exe");
+		
+		
+		//IE
+		System.setProperty("webdriver.ie.driver", "C:\\Selenium_Jars_Extensions\\IEDriverServer.exe");
 		
 		//Initialising driver
 		WebDriver driver = new ChromeDriver();
+		
+		//WebDriver driver = new InternetExplorerDriver();
 		
 		//WebDriver driver = new HtmlUnitDriver(); //Headless browser
 		
