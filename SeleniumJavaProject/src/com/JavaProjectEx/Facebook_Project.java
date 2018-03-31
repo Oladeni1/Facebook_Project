@@ -52,7 +52,7 @@ public static void FacebookTest() {
 		//Setting Birthday "year"
 		WebElement year =driver.findElement(By.name("birthday_year"));
 		Select yearselect = new Select(year);
-	    yearselect.selectByValue("1976");
+	    yearselect.selectByValue("1980");
 		
 		//Setting Gender
 		driver.findElement(By.name("sex")).click();
