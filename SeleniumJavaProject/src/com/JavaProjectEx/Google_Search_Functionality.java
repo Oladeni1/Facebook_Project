@@ -20,6 +20,8 @@ public class Google_Search_Functionality {
 		//Initialising driver
 		WebDriver driver = new ChromeDriver();
 		
+		//WebDriver driver = new HtmlUnitDriver(); //Headless browser
+		
 		//Lunching browser
 		driver.get("https://www.google.co.uk/");
 		
