@@ -1,5 +1,7 @@
 package com.JavaProjectEx;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -38,6 +40,7 @@ class JunitProject1 {
 				
 		//Lunching browser
 		driver.get("https://www.facebook.com/");
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 				
 	}
 
@@ -48,9 +51,9 @@ class JunitProject1 {
 	}
 
 	@Test
-	void forgottenAccount() throws Exception  {
+	void forgottenAccount()throws Exception{
 		//Forgotten Account
-		Thread.sleep(200);
+		//Thread.sleep(200);
 		driver.findElement(By.id("email")).sendKeys("manchester@yahoo.com");
 		driver.findElement(By.name("pass")).sendKeys("123456");
 		driver.findElement(By.id("u_0_2")).click();
