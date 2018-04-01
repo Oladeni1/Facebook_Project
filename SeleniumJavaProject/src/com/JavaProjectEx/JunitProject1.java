@@ -48,8 +48,9 @@ class JunitProject1 {
 	}
 
 	@Test
-	void forgottenAccount() {
+	void forgottenAccount() throws Exception  {
 		//Forgotten Account
+		Thread.sleep(200);
 		driver.findElement(By.id("email")).sendKeys("manchester@yahoo.com");
 		driver.findElement(By.name("pass")).sendKeys("123456");
 		driver.findElement(By.id("u_0_2")).click();
@@ -101,6 +102,17 @@ class JunitProject1 {
 		//Clicking Create Account button
 		driver.findElement(By.name("websubmit")).click();
 		
+		
+	}
+
+	@Test
+	void verifyAssertion() {
+		//verification & assertion
+		System.out.println(driver.getTitle());
+		assertTrue (driver.getTitle().equals("Facebook – log in or sign up"));
+		
+	}
+	private void assertTrue(boolean equals) {	
 	}
 
 }
