@@ -1,7 +1,5 @@
 package com.JavaProjectEx;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.AfterAll;
@@ -10,23 +8,28 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 
-class JunitProject1<TakesScreenshot> {
+class JunitProject1 {
 	
-	WebDriver driver;
+	static WebDriver driver;
+	
+	static String browser = "Chrome";
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		
 		//Setup of environment
-	    System.setProperty("webdriver.chrome.driver", "C:\\Selenium_Jars_Extensions\\chromedriver.exe");	
-	
+	    System.setProperty("webdriver.chrome.driver", "C:\\Selenium_Jars_Extensions\\chromedriver.exe");
+	    
+	    System.setProperty("webdriver.ie.driver", "C:\\Selenium_Jars_Extensions\\IEDriverServer.exe");
+	    
+	    System.setProperty("webdriver.edge.driver", "C:\\Selenium_Jars_Extensions\\MicrosoftWebDriver.exe");	
+		
 	}
 	
 
@@ -40,7 +43,21 @@ class JunitProject1<TakesScreenshot> {
 	void setUp() throws Exception {
 		
 		//Initialising driver
-		driver = new ChromeDriver();
+		if(browser == "Chrome") {
+			
+			driver = new ChromeDriver();
+			}
+		
+        if(browser == "IE") {
+			
+        	driver = new InternetExplorerDriver();
+			}
+        //MicrosoftWebDriver
+ if(browser == "Edge") {
+			
+        	driver = new InternetExplorerDriver();
+			}
+		
 				
 		//Lunching browser
 		driver.get("https://www.facebook.com/");
