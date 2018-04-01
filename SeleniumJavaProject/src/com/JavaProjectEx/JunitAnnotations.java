@@ -13,6 +13,7 @@ class JunitAnnotations {
 		System.out.println("BeforeClass: Setup Environment");
 	}
 
+	
 	@AfterAll
 	static void tearDownAfterClass() throws Exception {
 		System.out.println("AfterClass: Print test complete");
