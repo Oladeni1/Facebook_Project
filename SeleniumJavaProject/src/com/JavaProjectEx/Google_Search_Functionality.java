@@ -1,16 +1,20 @@
 package com.JavaProjectEx;
 
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Google_Search_Functionality {
 
+	
+	
 	public static void main(String[] args) {
 		
 		//Calling Search Functionality method
 		Google_Search_Functionality();
+		
 
 	}
 	public static void Google_Search_Functionality() {
@@ -21,7 +25,7 @@ public class Google_Search_Functionality {
 		
 		
 		//IE
-		System.setProperty("webdriver.ie.driver", "C:\\Selenium_Jars_Extensions\\IEDriverServer.exe");
+		//System.setProperty("webdriver.ie.driver", "C:\\Selenium_Jars_Extensions\\IEDriverServer.exe");
 		
 		//Initialising driver
 		WebDriver driver = new ChromeDriver();
@@ -44,8 +48,11 @@ public class Google_Search_Functionality {
 		
 		//Clicking Google Search button
 		driver.findElement(By.name("btnK")).click();
-		
 		//Closing Browser
 		driver.close();
+		
+		}
+	
 	}
-}
+
+
