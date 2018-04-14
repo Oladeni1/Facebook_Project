@@ -41,10 +41,10 @@ public class DragAndDropExample {
 			driver.close();
 		
 	}
-	public static void DragAndDrop(WebDriver driver, WebElement sourceofelement, WebElement destinationofelement ){
+	public static void DragAndDrop(WebDriver driver, WebElement source_firstitem, WebElement destination_firstitem ){
 		
 		Actions action = new Actions(driver);
-		action.dragAndDrop(sourceofelement, destinationofelement).perform();
+		action.dragAndDrop(source_firstitem, destination_firstitem).perform();
 		
 	}
 }
